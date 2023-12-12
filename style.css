@@ -1,0 +1,86 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas: 
+    "sidebar header header header"
+    "sidebar main main main";
+    height: 100vh;
+}
+header{
+    background: #000;
+    color: white;
+    border-bottom: 3px groove white;
+    grid-area: header;
+}
+.sidebar{
+    color: white;
+    background: gray;
+    grid-area: sidebar;
+}
+.sidebar.dashheader{
+    font-size: 18px;
+    font-style: italic;
+    margin-left: 20px;
+    font-weight: bolder;
+    
+}
+.sidebar ul li{
+    list-style: none;
+    padding: 10px 10px;
+}
+.sidebar ul li a{
+    color: white;
+    text-decoration: none;
+}
+.main-content{
+    grid-area: main;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: black;
+}
+.main-content>div{
+    width: 300px;
+    border: 1px groove blue;
+    height: 300px;
+    background: red;
+    margin-top: 15px;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+.main-content >div h2{
+    color: wheat;
+    text-align: center;
+
+}
+.main-content .income{
+    background: green;
+}
+.main-content .profile{
+    background: blueviolet;
+}
+.box-item{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 190px;
+    background: rgba(89, 86,98,0.6);
+    border-top: 2px groove wheat;
+}
+.product .item{
+    cursor: pointer;
+    background: gray;
+    margin-left: 10px;
+}
+.product .item .item-infor{
+    margin-top: 130px;
+    border-top: 1px groove wheat;
+}
+.main-content .item img{
+    border-radius: 50px;
+    padding: 13px 13px;
+}
